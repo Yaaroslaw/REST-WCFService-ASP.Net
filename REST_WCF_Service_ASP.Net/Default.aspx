@@ -5,7 +5,7 @@
     <div class="jumbotron">
         <button onclick ="doWork(); return false;"> DoWork</button><%--false, cause no need to reload a page--%>
         <button onclick ="doSquare(); return false;"> DoSquare</button>
-        <input type ="text" id =" squareValue"/>
+        <input type ="text" id ="squareValue"/>
     </div>
 <script type =" text/javascript">
     function doWork(){
