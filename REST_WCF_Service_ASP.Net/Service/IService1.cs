@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.ServiceModel.Web;
 
 namespace REST_WCF_Service_ASP.Net.Service
 {
@@ -12,6 +13,9 @@ namespace REST_WCF_Service_ASP.Net.Service
     public interface IService1
     {
         [OperationContract]
-        void DoWork();
+        [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Bare,
+            UriTemplate = "DoWork")]
+        string DoWork();
+
     }
 }
